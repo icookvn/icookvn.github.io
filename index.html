@@ -11,11 +11,11 @@
 <header>
   <h1>ICook</h1>
   <p>Healthy Recipes for Gymmers 💪</p>
-  <button onclick="showHome()">Home</button>
-  <button onclick="showConverter()">Unit Converter</button>
-  <button onclick="toggleTheme()">Dark / Light</button>
-  <button onclick="showIngredients()">Ingredients</button>
-  <button onclick="showAbout()">About Vietnam</button>
+  <button onclick="showHome()">🏠 Home</button>
+  <button onclick="showConverter()">⚖️ Unit Converter</button>
+  <button onclick="toggleTheme()">🌓 Dark / Light</button>
+  <button onclick="showIngredients()">🥗 Ingredients</button>
+  <button onclick="showAbout()">🌍 World Cuisine</button>
 </header>
 
 <div id="homePage">
@@ -24,10 +24,10 @@
 
     <!-- LEFT: SEARCH -->
     <div class="search-box">
-      <h2>Find Recipes by Nutrition</h2>
+      <h2>🔍 Find Recipes by Nutrition</h2>
       <div class="search-row">
-        <input type="number" id="searchProtein" placeholder="Minimum Protein (g)">
-        <input type="number" id="searchCalories" placeholder="Maximum Calories (kcal)">
+        <input type="number" id="searchProtein" placeholder="Min Protein (g)">
+        <input type="number" id="searchCalories" placeholder="Max Calories">
         <button onclick="filterRecipes()">Search</button>
         <button onclick="resetFilter()">Reset</button>
       </div>
@@ -35,9 +35,8 @@
 
     <!-- RIGHT: CALCULATOR -->
     <div class="calculator">
-      <h2>Daily Nutrition Calculator</h2>
+      <h2>📊 Daily Nutrition Calculator</h2>
 
-      <!-- Gender -->
       <div class="row">
         <select id="gender">
           <option value="male">Male</option>
@@ -45,12 +44,10 @@
         </select>
       </div>
 
-      <!-- Age -->
       <div class="row">
         <input type="number" id="age" placeholder="Age">
       </div>
 
-      <!-- Weight -->
       <div class="row">
         <input type="number" id="weight" placeholder="Weight">
         <select id="weightUnit">
@@ -59,14 +56,13 @@
         </select>
       </div>
 
-      <!-- Height -->
       <div class="row">
         <div id="heightCmWrap">
-          <input type="number" id="heightCm" placeholder="Height (cm)" min="0" step="any">
+          <input type="number" id="heightCm" placeholder="Height (cm)">
         </div>
         <div id="heightFtWrap" style="display:none;">
-          <input type="number" id="heightFt" placeholder="Feet (ft)" min="0" step="1">
-          <input type="number" id="heightIn" placeholder="Inches (in)" min="0" step="any">
+          <input type="number" id="heightFt" placeholder="Feet">
+          <input type="number" id="heightIn" placeholder="Inches">
         </div>
         <select id="heightUnit">
           <option value="cm">cm</option>
@@ -74,17 +70,16 @@
         </select>
       </div>
 
-      <!-- Goal -->
       <div class="row">
         <select id="goal">
-          <option value="maintain">Maintain</option>
+          <option value="maintain">Maintain Weight</option>
           <option value="bulk">Build Muscle (Bulk)</option>
           <option value="cut">Lose Fat (Cut)</option>
         </select>
       </div>
 
       <div class="row">
-        <button id="calcBtn" type="button">Calculus</button>
+        <button id="calcBtn" type="button">Calculate</button>
         <button id="resetBtn" type="button">Reset</button>
       </div>
 
@@ -98,126 +93,36 @@
 
   <!-- RECIPE GRID - 30 CARDS -->
   <div class="grid">
-    <div class="card" onclick="openRecipe(0)">
-      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80">
-      <h3>Grilled Chicken Bowl</h3>
-    </div>
-    <div class="card" onclick="openRecipe(1)">
-      <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=600&q=80">
-      <h3>Protein Pancakes</h3>
-    </div>
-    <div class="card" onclick="openRecipe(2)">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80">
-      <h3>Salmon & Quinoa</h3>
-    </div>
-    <div class="card" onclick="openRecipe(3)">
-      <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80">
-      <h3>Beef Stir Fry</h3>
-    </div>
-    <div class="card" onclick="openRecipe(4)">
-      <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80">
-      <h3>Greek Yogurt Bowl</h3>
-    </div>
-    <div class="card" onclick="openRecipe(5)">
-      <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80">
-      <h3>Avocado Egg Toast</h3>
-    </div>
-    <div class="card" onclick="openRecipe(6)">
-      <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=600&q=80">
-      <h3>Turkey Wrap</h3>
-    </div>
-    <div class="card" onclick="openRecipe(7)">
-      <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80">
-      <h3>Tuna Salad</h3>
-    </div>
-    <div class="card" onclick="openRecipe(8)">
-      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80">
-      <h3>Sweet Potato & Chicken</h3>
-    </div>
-    <div class="card" onclick="openRecipe(9)">
-      <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80">
-      <h3>Protein Smoothie</h3>
-    </div>
-    <div class="card" onclick="openRecipe(10)">
-      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80">
-      <h3>Oatmeal & Peanut Butter</h3>
-    </div>
-    <div class="card" onclick="openRecipe(11)">
-      <img src="https://images.unsplash.com/photo-1605478035897-5f8b2f1d0a2e?auto=format&fit=crop&w=600&q=80">
-      <h3>Chicken Caesar Salad</h3>
-    </div>
-    <div class="card" onclick="openRecipe(12)">
-      <img src="https://www.africanbites.com/wp-content/uploads/2021/04/IMG_7901.jpg">
-      <h3>Egg White Omelette</h3>
-    </div>
-    <div class="card" onclick="openRecipe(13)">
-      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80">
-      <h3>Quinoa Veggie Bowl</h3>
-    </div>
-    <div class="card" onclick="openRecipe(14)">
-      <img src="https://images.unsplash.com/photo-1506086679525-9f75c9e33f77?auto=format&fit=crop&w=600&q=80">
-      <h3>Grilled Shrimp Plate</h3>
-    </div>
-    <div class="card" onclick="openRecipe(15)">
-      <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=600&q=80">
-      <h3>Lean Turkey Meatballs</h3>
-    </div>
-    <div class="card" onclick="openRecipe(16)">
-      <img src="https://images.unsplash.com/photo-1605478035897-5f8b2f1d0a2e?auto=format&fit=crop&w=600&q=80">
-      <h3>High Protein Pasta</h3>
-    </div>
-    <div class="card" onclick="openRecipe(17)">
-      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80">
-      <h3>Tofu Stir Fry</h3>
-    </div>
-    <div class="card" onclick="openRecipe(18)">
-      <img src="https://images.unsplash.com/photo-1514517220031-1d3f6d50b3e3?auto=format&fit=crop&w=600&q=80">
-      <h3>Protein Overnight Oats</h3>
-    </div>
-    <div class="card" onclick="openRecipe(19)">
-      <img src="https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?auto=format&fit=crop&w=600&q=80">
-      <h3>Avocado Chicken Salad</h3>
-    </div>
-    <div class="card" onclick="openRecipe(20)">
-      <img src="https://images.unsplash.com/photo-1603079845889-9a32e6d76a4e?auto=format&fit=crop&w=600&q=80">
-      <h3>Salmon Avocado Toast</h3>
-    </div>
-    <div class="card" onclick="openRecipe(21)">
-      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80">
-      <h3>Chicken Burrito Bowl</h3>
-    </div>
-    <div class="card" onclick="openRecipe(22)">
-      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80">
-      <h3>Banana Protein Muffins</h3>
-    </div>
-    <div class="card" onclick="openRecipe(23)">
-      <img src="https://images.unsplash.com/photo-1576402187878-974f70c890a5?auto=format&fit=crop&w=600&q=80">
-      <h3>Chia Pudding</h3>
-    </div>
-    <div class="card" onclick="openRecipe(24)">
-      <img src="https://images.unsplash.com/photo-1522184216316-3c25379f9763?auto=format&fit=crop&w=600&q=80">
-      <h3>Steak & Veggies</h3>
-    </div>
-    <div class="card" onclick="openRecipe(25)">
-      <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=600&q=80">
-      <h3>Greek Chicken Wrap</h3>
-    </div>
-    <div class="card" onclick="openRecipe(26)">
-      <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80">
-      <h3>Healthy Pizza</h3>
-    </div>
-    <div class="card" onclick="openRecipe(27)">
-      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80">
-      <h3>Brown Rice & Tofu</h3>
-    </div>
-    <div class="card" onclick="openRecipe(28)">
-      <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80">
-      <h3>Chicken Fajitas</h3>
-    </div>
-    <div class="card" onclick="openRecipe(29)">
-      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80">
-      <h3>Protein Energy Balls</h3>
-    </div>
+    <div class="card" onclick="openRecipe(0)"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80"><h3>Grilled Chicken Bowl</h3></div>
+    <div class="card" onclick="openRecipe(1)"><img src="https://www.thehealthymaven.com/wp-content/uploads/2013/07/banana-protein-pancakes-grain-free-13.jpg"><h3>Protein Pancakes</h3></div>
+    <div class="card" onclick="openRecipe(2)"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"><h3>Salmon & Quinoa</h3></div>
+    <div class="card" onclick="openRecipe(3)"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80"><h3>Beef Stir Fry</h3></div>
+    <div class="card" onclick="openRecipe(4)"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80"><h3>Greek Yogurt Bowl</h3></div>
+    <div class="card" onclick="openRecipe(5)"><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"><h3>Avocado Egg Toast</h3></div>
+    <div class="card" onclick="openRecipe(6)"><img src="https://www.mindful.sodexo.com/wp-content/uploads/2024/06/Mindful-Fall-_0026_MDF_CajunTurkeyWrap.jpg"><h3>Turkey Wrap</h3></div>
+    <div class="card" onclick="openRecipe(7)"><img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80"><h3>Tuna Salad</h3></div>
+    <div class="card" onclick="openRecipe(8)"><img src="https://www.eatingwell.com/thmb/lpcs5PVRkxzny-oandlZYTe7vJ0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/roast-chicken-sweet-potatoes-250549-1x1-bab6fea85bda439fa5f0ad5fd07e29d8.jpg"><h3>Sweet Potato & Chicken</h3></div>
+    <div class="card" onclick="openRecipe(9)"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"><h3>Protein Smoothie</h3></div>
+    <div class="card" onclick="openRecipe(10)"><img src="https://www.fivehearthome.com/wp-content/uploads/2023/09/Peanut-Butter-Banana-Oatmeal-Recipe-by-FiveHeartHome_1200pxFeatured-1.jpg"><h3>Oatmeal & Peanut Butter</h3></div>
+    <div class="card" onclick="openRecipe(11)"><img src="https://www.kitchensanctuary.com/wp-content/uploads/2024/07/Chicken-Caesar-Salad-square-FS.jpg"><h3>Chicken Caesar Salad</h3></div>
+    <div class="card" onclick="openRecipe(12)"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTUC5F9ybCa8NJ8JQH2eStVFy9ArDr3jk6YQ&s"><h3>Egg White Omelette</h3></div>
+    <div class="card" onclick="openRecipe(13)"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80"><h3>Quinoa Veggie Bowl</h3></div>
+    <div class="card" onclick="openRecipe(14)"><img src="https://www.tastingtable.com/img/gallery/sweet-and-spicy-grilled-shrimp-recipe/intro-1643120504.jpg"><h3>Grilled Shrimp Plate</h3></div>
+    <div class="card" onclick="openRecipe(15)"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9gHXkJNAC7oqSmUKUTsMoSTJfo9tmmFXSkQ&s"><h3>Lean Turkey Meatballs</h3></div>
+    <div class="card" onclick="openRecipe(16)"><img src="https://mayihavethatrecipe.com/wp-content/uploads/2018/12/high-protein-mushroom-pasta-facebook.jpg"><h3>High Protein Pasta</h3></div>
+    <div class="card" onclick="openRecipe(17)"><img src="https://hips.hearstapps.com/hmg-prod/images/tofu-stir-fry-secondary-68e41d80d23e2.jpeg"><h3>Tofu Stir Fry</h3></div>
+    <div class="card" onclick="openRecipe(18)"><img src="https://www.purelykaylie.com/wp-content/uploads/2023/07/protein-overnight-oats-6.jpg"><h3>Protein Overnight Oats</h3></div>
+    <div class="card" onclick="openRecipe(19)"><img src="https://cdn.sunbasket.com/51aff5d6-80bf-421e-8e24-68c54941ab76.jpg"><h3>Avocado Chicken Salad</h3></div>
+    <div class="card" onclick="openRecipe(20)"><img src="https://www.mediterraneanliving.com/wp-content/uploads/2018/04/image4.jpg"><h3>Salmon Avocado Toast</h3></div>
+    <div class="card" onclick="openRecipe(21)"><img src="https://healthyfitnessmeals.com/wp-content/uploads/2018/08/Grilled-chicken-burrito-bowls-10.jpg"><h3>Chicken Burrito Bowl</h3></div>
+    <div class="card" onclick="openRecipe(22)"><img src="https://www.brighteyedbaker.com/wp-content/uploads/2024/05/Banana-Protein-Muffin-Recipe.jpg"><h3>Banana Protein Muffins</h3></div>
+    <div class="card" onclick="openRecipe(23)"><img src="https://onebalancedlife.com/wp-content/uploads/2020/02/Banana-Chia-Pudding--scaled.jpg"><h3>Chia Pudding</h3></div>
+    <div class="card" onclick="openRecipe(24)"><img src="https://grillinwithdad.com/wp-content/uploads/2025/05/steakveggies-featured.jpg"><h3>Steak & Veggies</h3></div>
+    <div class="card" onclick="openRecipe(25)"><img src="https://www.servedfromscratch.com/wp-content/uploads/2024/04/Greek-Chicken-Salad-Wraps-9.jpg"><h3>Greek Chicken Wrap</h3></div>
+    <div class="card" onclick="openRecipe(26)"><img src="https://foodbyjonister.com/wp-content/uploads/2020/05/HealthyPizza1.jpg"><h3>Healthy Pizza</h3></div>
+    <div class="card" onclick="openRecipe(27)"><img src="https://jamiegeller.com/wp-content/uploads/2019/07/brown-rice-stir-fryjpg-scaled.jpg"><h3>Brown Rice & Tofu</h3></div>
+    <div class="card" onclick="openRecipe(28)"><img src="https://feelgoodfoodie.net/wp-content/uploads/2024/08/Chicken-Fajitas-16.jpg"><h3>Chicken Fajitas</h3></div>
+    <div class="card" onclick="openRecipe(29)"><img src="https://www.modernhoney.com/wp-content/uploads/2018/06/No-Bake-Protein-Energy-Balls-14.jpg"><h3>Protein Energy Balls</h3></div>
   </div>
 </div>
 
@@ -231,17 +136,21 @@
 
 <!-- INGREDIENT PAGE -->
 <div id="ingredientPage" style="display:none; padding:20px">
-  <h2>Ingredient Nutrition Library</h2>
-  <input id="ingredientSearch" placeholder="Search ingredient">
+  <h2>🥗 Ingredient Nutrition Library</h2>
+  <input id="ingredientSearch" placeholder="🔍 Search ingredient...">
   <div id="ingredientList" class="grid"></div>
 
-  <h3>Your Meal</h3>
-  <ul id="ingredientMealList"></ul>
-  <p>Total Calories: <span id="ingredientTotalCalories">0</span></p>
-  <p>Total Protein: <span id="ingredientTotalProtein">0</span></p>
-  <p>Total Carbs: <span id="ingredientTotalCarbs">0</span></p>
-  <p>Total Fat: <span id="ingredientTotalFat">0</span></p>
-  <button onclick="clearIngredientMeal()">Clear Meal</button>
+  <div class="meal-builder">
+    <h3>📋 Your Meal</h3>
+    <ul id="ingredientMealList"></ul>
+    <div class="meal-totals">
+      <p>🔥 Calories: <span id="ingredientTotalCalories">0</span></p>
+      <p>💪 Protein: <span id="ingredientTotalProtein">0</span>g</p>
+      <p>🍚 Carbs: <span id="ingredientTotalCarbs">0</span>g</p>
+      <p>🧈 Fat: <span id="ingredientTotalFat">0</span>g</p>
+    </div>
+    <button onclick="clearIngredientMeal()">🗑️ Clear Meal</button>
+  </div>
 </div>
 
 <!-- CONVERTER PAGE -->
@@ -296,50 +205,35 @@
   </div>
 </div>
 
-<!-- ABOUT VIETNAM PAGE -->
+<!-- ABOUT PAGE - World Culinary Journey (GỘP LẠI) -->
 <div id="aboutPage" style="display:none;">
-  <section class="vietnam-hero">
-    <h1>Khang Duy Nguyen</h1>
-    <p>Authentic Vietnamese Cuisine Experience</p>
+  <section class="world-hero">
+    <h1>🌍 World Culinary Journey</h1>
+    <p>Discover iconic dishes from other countries with their stories & recipes</p>
   </section>
 
-  <section class="food-section">
-    <h2>🍜 Signature Dishes of Vietnam</h2>
-    <div class="food-grid">
-      <div class="food-card" onclick="toggleDetails(this)">
-        <img src="https://i-giadinh.vnecdn.net/2025/11/17/Pho-bo-Ha-Noi-7-vnexpress-1763-7388-9585-1763372391.jpg">
-        <h3>Pho</h3>
-        <div class="food-details">
-          <h4>🧂 Ingredients:</h4>
-          <ul><li>Beef bones</li><li>Rice noodles</li><li>Beef slices</li><li>Star anise, cinnamon</li><li>Onion, ginger</li></ul>
-          <h4>👨‍🍳 Cooking Steps:</h4>
-          <ol><li>Simmer beef bones for 6–8 hours.</li><li>Add spices and charred onion & ginger.</li><li>Cook rice noodles separately.</li><li>Pour hot broth over noodles & beef.</li></ol>
-        </div>
-      </div>
+  <div class="country-filter">
+    <button class="filter-btn active" onclick="filterCountry('all')">🌎 All</button>
+    <button class="filter-btn" onclick="filterCountry('asia')">🍜 Asia</button>
+    <button class="filter-btn" onclick="filterCountry('europe')">🥖 Europe</button>
+    <button class="filter-btn" onclick="filterCountry('americas')">🌮 Americas</button>
+    <button class="filter-btn" onclick="filterCountry('middle-east')">🧆 Middle East</button>
+  </div>
 
-      <div class="food-card" onclick="toggleDetails(this)">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/66/94/19/banh-mi-362.jpg?w=900&h=-1&s=1">
-        <h3>Banh Mi</h3>
-        <div class="food-details">
-          <h4>🧂 Ingredients:</h4>
-          <ul><li>Baguette</li><li>Grilled pork</li><li>Pickled carrot</li><li>Cucumber</li><li>Chili & herbs</li></ul>
-          <h4>👨‍🍳 Cooking Steps:</h4>
-          <ol><li>Grill seasoned pork.</li><li>Slice baguette and spread sauce.</li><li>Add meat, vegetables, and herbs.</li><li>Serve fresh and crispy.</li></ol>
-        </div>
-      </div>
-
-      <div class="food-card" onclick="toggleDetails(this)">
-        <img src="https://cdn.tasteatlas.com/images/dishes/5fd6cc95e23f4d1eb34009678c2d6556.jpg?m=facebook">
-        <h3>Goi Cuon (spring roll)</h3>
-        <div class="food-details">
-          <h4>🧂 Ingredients:</h4>
-          <ul><li>Rice paper</li><li>Shrimp</li><li>Pork slices</li><li>Vermicelli</li><li>Fresh herbs</li></ul>
-          <h4>👨‍🍳 Cooking Steps:</h4>
-          <ol><li>Soften rice paper in water.</li><li>Add shrimp, pork, noodles, herbs.</li><li>Roll tightly.</li><li>Serve with peanut sauce.</li></ol>
-        </div>
-      </div>
+  <section class="food-section" id="worldFoodSection">
+    <div class="food-grid" id="worldFoodGrid">
+      <!-- Cards sẽ được JavaScript render -->
     </div>
   </section>
+
+ 
+  <!-- Modal chi tiết món ăn world -->
+  <div id="dishModal" class="modal">
+    <div class="modal-content dish-modal-content">
+      <span class="close-btn" onclick="closeDishModal()">✖</span>
+      <div id="dishDetail"></div>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
