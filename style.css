@@ -558,3 +558,190 @@ header button:hover {
   padding-left: 20px;
   margin: 10px 0;
 }
+/* World Culinary Journey */
+.world-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.world-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.country-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 25px 20px;
+  background: #f8f9fa;
+}
+
+.dark .country-filter {
+  background: #1a1a2e;
+}
+
+.filter-btn {
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.dark .filter-btn {
+  background: #2a2a3e;
+  color: #ddd;
+}
+
+/* Dish Cards */
+.dish-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.dish-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.country-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dish-card h3 {
+  padding: 15px 15px 5px;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.dish-card .country-name {
+  padding: 0 15px 10px;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.dish-card .short-story {
+  padding: 0 15px 15px;
+  font-size: 0.85em;
+  color: #666;
+  line-height: 1.4;
+}
+
+.dark .dish-card {
+  background: #1e1e2e;
+}
+
+.dark .dish-card h3 {
+  color: #eee;
+}
+
+.dark .short-story {
+  color: #aaa;
+}
+
+/* Dish Modal */
+.dish-modal-content {
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.dish-header {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.dish-header-img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.dish-info {
+  flex: 1;
+}
+
+.dish-info h2 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.country-tag {
+  display: inline-block;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  margin: 10px 0;
+}
+
+.story-box {
+  background: #f0f4ff;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  border-left: 5px solid #667eea;
+}
+
+.dark .story-box {
+  background: #2a2a3e;
+}
+
+.ingredients-list, .steps-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.ingredients-list li, .steps-list li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.fun-fact {
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.dark .fun-fact {
+  background: #3a2a1e;
+}
